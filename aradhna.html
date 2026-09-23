@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Aradhna Incense — Case Study | Zeba</title>
+<meta name="description" content="Case study: How Zeba built the B2B website for Aradhna Incense — product catalog, export section, and brand identity.">
+<link rel="canonical" href="https://zebamansoori.com/aradhna.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23090E1A'/><text x='16' y='23' font-family='serif' font-size='18' font-weight='700' fill='%23D4AF37' text-anchor='middle'>Z</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.cs-hero{padding:130px 0 64px;background:var(--navy2);border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.cs-hero::before{content:'';position:absolute;top:0;right:0;width:500px;height:100%;background:radial-gradient(ellipse 400px 300px at 80% 50%,rgba(212,175,55,.05) 0%,transparent 70%);pointer-events:none}
+.cs-preview{border-radius:var(--r-xl);overflow:hidden;border:1px solid var(--gold-border);box-shadow:var(--sh-lg),0 0 60px rgba(212,175,55,.08);margin-top:48px;position:relative;height:420px}
+.cs-preview iframe{width:200%;height:200%;transform:scale(.5);transform-origin:top left;border:none}
+.cs-preview-ov{position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(9,14,26,.8) 100%)}
+.cs-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+.cs-stat{padding:24px;background:rgba(255,255,255,0.04);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.07);border-radius:var(--r-lg);text-align:center;transition:all var(--tr)}
+.cs-stat:hover{border-color:rgba(6,182,212,0.25)}
+.cs-stat-n{font-family:var(--fh);font-size:2rem;font-weight:700;color:var(--gold);margin-bottom:4px}
+.cs-stat-l{font-size:.78rem;color:var(--t3)}
+.cs-grid{display:grid;grid-template-columns:2fr 1fr;gap:48px;align-items:start}
+.cs-content h3{font-family:var(--fh);font-size:1.3rem;font-weight:600;color:var(--white);margin:28px 0 12px}
+.cs-content p{font-size:.9rem;color:var(--t3);line-height:1.9;margin-bottom:14px}
+.feat-list{display:flex;flex-direction:column;gap:10px;margin:16px 0}
+.feat-item{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;background:rgba(255,255,255,0.04);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.07);border-radius:var(--r-sm)}
+.feat-check{color:var(--gold);flex-shrink:0;font-size:.9rem;margin-top:1px}
+.feat-text{font-size:.84rem;color:var(--t3);line-height:1.6}
+.feat-text strong{color:var(--t2);display:block;font-weight:600;margin-bottom:1px}
+.cs-sidebar{position:sticky;top:80px}
+.cs-info-card{background:rgba(255,255,255,0.04);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.07);border-radius:var(--r-lg);padding:24px;margin-bottom:16px}
+.cs-info-title{font-family:var(--fm);font-size:.65rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.cs-info-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border);font-size:.82rem}
+.cs-info-row:last-child{border-bottom:none}
+.cs-info-label{color:var(--t3)}
+.cs-info-val{color:var(--t2);font-weight:500;text-align:right}
+.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
+.prod-item{padding:16px;background:rgba(255,255,255,0.04);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.07);border-radius:var(--r-sm);text-align:center;transition:all var(--tr)}
+.prod-item:hover{border-color:rgba(6,182,212,0.25)}
+.prod-icon{font-size:1.8rem;margin-bottom:8px}
+.prod-name{font-size:.84rem;font-weight:700;color:var(--white);margin-bottom:3px}
+.prod-desc{font-size:.74rem;color:var(--t3);line-height:1.5}
+@media(max-width:900px){.cs-grid{grid-template-columns:1fr}.cs-sidebar{position:static}.cs-stats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.cs-stats{grid-template-columns:1fr 1fr}.prod-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<nav id="nav"><div class="wrap nav-inner">
+  <a href="index.html" class="nav-logo">Zeba.</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+    <li><a href="project.html">Work</a></li><li><a href="index.html#agents">AI Agents</a></li>
+    <li><a href="index.html#pricing">Pricing</a></li><li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-right"><a href="contact.html" class="nav-cta">Let's Talk</a><div class="ham" id="ham"><span></span><span></span><span></span></div></div>
+</div></nav>
+<div class="mob-nav" id="mob"><button class="mob-close" id="mclose">✕</button>
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="project.html">Work</a><a href="index.html#agents">AI Agents</a><a href="index.html#pricing">Pricing</a><a href="contact.html">Contact</a>
+</div>
+
+<div class="cs-hero"><div class="wrap">
+  <div class="rev"><a href="project.html" style="font-family:var(--fm);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--t3);display:inline-flex;align-items:center;gap:6px;margin-bottom:20px">← All Work</a></div>
+  <div class="eyebrow rev">Case Study · Manufacturing & Export</div>
+  <h1 class="h2 rev" style="font-size:clamp(1.8rem,3.5vw,2.8rem)">Aradhna Incense</h1>
+  <p class="lead rev">B2B product website for a dhoop sticks manufacturer and exporter — product catalog, OEM page, export section, and complete brand identity.</p>
+  <div class="rev" style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px">
+    <span class="tag tag-glass">Manufacturing</span><span class="tag tag-glass">B2B</span><span class="tag tag-glass">Export</span><span class="tag tag-glass">Product Catalog</span><span class="tag tag-glass">Brand Identity</span>
+  </div>
+  <div class="cs-preview rev d2"><iframe src="https://aradhnaincense.com/" loading="lazy" scrolling="no" title="Aradhna Incense website"></iframe><div class="cs-preview-ov"></div></div>
+</div></div>
+
+<section class="section"><div class="wrap">
+  <div class="cs-stats">
+    <div class="cs-stat rev"><div class="cs-stat-n">6</div><div class="cs-stat-l">Product Categories</div></div>
+    <div class="cs-stat rev d1"><div class="cs-stat-n">B2B</div><div class="cs-stat-l">Export Ready</div></div>
+    <div class="cs-stat rev d2"><div class="cs-stat-n">Full</div><div class="cs-stat-l">Brand Identity</div></div>
+    <div class="cs-stat rev d3"><div class="cs-stat-n">OEM</div><div class="cs-stat-l">Private Label Page</div></div>
+  </div>
+
+  <div class="cs-grid" style="margin-top:56px">
+    <div class="cs-content">
+      <h3 class="rev">The Challenge</h3>
+      <p class="rev">Aradhna Incense ek established dhoop sticks manufacturer aur exporter hai. Unka kaam tha — B2B distributors aur international buyers ke saath connect karna. Lekin bina proper website ke, potential partners pehle from aate hi nahi the. Unhe ek professional B2B presence chahiye thi jo trust build kare aur enquiries generate kare.</p>
+
+      <h3 class="rev">What I Built</h3>
+      <p class="rev">Maine ek complete B2B website design aur develop ki — product catalog, export section, Private Label/OEM page, certifications display, aur B2B enquiry system ke saath. Brand identity bhi main hi banai — colors, typography, aur visual language jo manufacturers ke liye professional aur trustworthy feel karti hai.</p>
+
+      <div class="feat-list">
+        <div class="feat-item rev"><span class="feat-check">✦</span><div class="feat-text"><strong>Product Catalog</strong>6 product categories with detailed descriptions — Traditional, Herbal, Floral, Meditation, Temple, aur Custom Blends</div></div>
+        <div class="feat-item rev"><span class="feat-check">✦</span><div class="feat-text"><strong>B2B Enquiry System</strong>Dedicated B2B enquiry forms for distributors, retailers, aur export partners</div></div>
+        <div class="feat-item rev"><span class="feat-check">✦</span><div class="feat-text"><strong>Export Section</strong>International buyers ke liye dedicated page — shipping info, certifications, minimum order details</div></div>
+        <div class="feat-item rev"><span class="feat-check">✦</span><div class="feat-text"><strong>Private Label / OEM Page</strong>Custom manufacturing page — brands ke liye jo apna product line banana chahte hain</div></div>
+        <div class="feat-item rev"><span class="feat-check">✦</span><div class="feat-text"><strong>Certifications Display</strong>Trust signals front-and-center — MSME, quality certifications, aur industry memberships</div></div>
+        <div class="feat-item rev"><span class="feat-check">✦</span><div class="feat-text"><strong>Complete Brand Identity</strong>Logo, color palette, typography — professional visual language jo company ki quality reflect kare</div></div>
+        <div class="feat-item rev"><span class="feat-check">✦</span><div class="feat-text"><strong>Mobile Responsive</strong>Buyers mobile aur desktop dono pe evaluate karte hain — dono pe seamless experience</div></div>
+        <div class="feat-item rev"><span class="feat-check">✦</span><div class="feat-text"><strong>WhatsApp Integration</strong>One-tap WhatsApp contact for quick B2B discussions</div></div>
+      </div>
+
+      <h3 class="rev">Product Categories</h3>
+      <div class="prod-grid">
+        <div class="prod-item rev"><div class="prod-icon">🪔</div><div class="prod-name">Traditional Dhoop</div><div class="prod-desc">Classic fragrances for daily rituals</div></div>
+        <div class="prod-item rev d1"><div class="prod-icon">🌿</div><div class="prod-name">Herbal Dhoop</div><div class="prod-desc">Pure herbal blends for wellness</div></div>
+        <div class="prod-item rev d2"><div class="prod-icon">🌸</div><div class="prod-name">Floral Dhoop</div><div class="prod-desc">Premium floral fragrances</div></div>
+        <div class="prod-item rev"><div class="prod-icon">🧘</div><div class="prod-name">Meditation Dhoop</div><div class="prod-desc">For deep meditation &amp; spiritual practice</div></div>
+        <div class="prod-item rev d1"><div class="prod-icon">🛕</div><div class="prod-name">Temple Dhoop</div><div class="prod-desc">High-quality for religious ceremonies</div></div>
+        <div class="prod-item rev d2"><div class="prod-icon">⚗️</div><div class="prod-name">Custom Blends</div><div class="prod-desc">Private label &amp; OEM formulations</div></div>
+      </div>
+    </div>
+
+    <div class="cs-sidebar">
+      <div class="cs-info-card rev">
+        <div class="cs-info-title">Project Details</div>
+        <div class="cs-info-row"><span class="cs-info-label">Client</span><span class="cs-info-val">Aradhna Incense</span></div>
+        <div class="cs-info-row"><span class="cs-info-label">Industry</span><span class="cs-info-val">Manufacturing / Export</span></div>
+        <div class="cs-info-row"><span class="cs-info-label">Type</span><span class="cs-info-val">B2B Website</span></div>
+        <div class="cs-info-row"><span class="cs-info-label">Deliverables</span><span class="cs-info-val">Website + Brand Identity</span></div>
+        <div class="cs-info-row"><span class="cs-info-label">Focus</span><span class="cs-info-val">B2B Enquiry Gen</span></div>
+      </div>
+      <div class="cs-info-card rev d1">
+        <div class="cs-info-title">Technologies</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          <span class="tag tag-gold">HTML5</span><span class="tag tag-glass">CSS3</span><span class="tag tag-glass">JavaScript</span>
+          <span class="tag tag-glass">Schema.org</span><span class="tag tag-glass">WhatsApp API</span>
+        </div>
+      </div>
+      <div style="padding:20px;background:rgba(255,255,255,0.04);backdrop-filter:blur(16px);border:1px solid var(--gold-border);border-radius:var(--r-lg);text-align:center" class="rev d2">
+        <p style="font-size:.84rem;color:var(--t3);margin-bottom:14px">Aisi website chahiye apne business ke liye?</p>
+        <a href="contact.html" class="btn btn-gold" style="width:100%;justify-content:center">Get a Free Quote</a>
+        <a href="https://aradhnaincense.com/" target="_blank" rel="noopener noreferrer" class="btn btn-out" style="width:100%;justify-content:center;margin-top:8px">Visit Live Site ↗</a>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<div style="background:var(--navy2);padding:64px 0;text-align:center;border-top:1px solid var(--border)"><div class="wrap">
+  <a href="samyak.html" class="btn btn-out" style="margin-right:12px">← Samyak Case Study</a>
+  <a href="project.html" class="btn btn-gold">All Projects →</a>
+</div></div>
+
+<footer><div class="wrap">
+  <div class="ft-top">
+    <div><div class="ft-logo">Zeba.</div><div class="ft-desc">Web Designer &amp; Developer — modern websites for businesses.</div></div>
+    <div class="ft-col"><div class="ft-col-title">Pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="project.html">Work</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="ft-col"><div class="ft-col-title">Projects</div><ul><li><a href="samyak.html">Samyak Computer Classes</a></li><li><a href="aradhna.html">Aradhna Incense</a></li></ul></div>
+    <div class="ft-col"><div class="ft-col-title">Contact</div><ul><li><a href="mailto:zebamansoori.fea@gmail.com">zebamansoori.fea@gmail.com</a></li><li><a href="https://wa.me/918595882978">WhatsApp</a></li></ul></div>
+  </div>
+  <div class="ft-bottom"><span>© 2025 Zeba</span><span>Designed &amp; built by me.</span></div>
+</div></footer>
+<button id="bt" aria-label="Back to top">↑</button>
+<script src="main.js"></script>
+</body></html>

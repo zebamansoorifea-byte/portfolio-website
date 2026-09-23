@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>About Zeba — Web Designer & Developer</title>
+<meta name="description" content="Zeba ke baare mein — Web Designer & Developer who thinks about your business, not just your website. My story, skills, and values.">
+<link rel="canonical" href="https://zebamansoori.com/about.html">
+<meta property="og:title" content="About Zeba — Web Designer & Developer">
+<meta property="og:url" content="https://zebamansoori.com/about.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23090E1A'/><text x='16' y='23' font-family='serif' font-size='18' font-weight='700' fill='%23D4AF37' text-anchor='middle'>Z</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.about-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:start;margin-top:48px}
+.about-photo{border-radius:var(--r-xl);overflow:hidden;border:1px solid var(--gold-border);box-shadow:var(--sh-lg),0 0 40px rgba(212,175,55,.08);aspect-ratio:4/5;background:var(--navy3);display:flex;align-items:center;justify-content:center;position:relative}
+.about-photo img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.about-photo-tag{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--navy);padding:8px 18px;border-radius:var(--r);font-size:.75rem;font-weight:700;white-space:nowrap}
+.about-text p{font-size:.95rem;color:var(--t3);line-height:1.9;margin-bottom:16px}
+.about-text p strong{color:var(--t2)}
+.creds{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 28px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:24px 0}
+.fact{padding:16px;background:rgba(255,255,255,0.04);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.07);border-radius:var(--r-sm);transition:all var(--tr)}
+.fact:hover{border-color:rgba(6,182,212,0.25)}
+.fact-icon{font-size:1.1rem;margin-bottom:6px}
+.fact-label{font-size:.82rem;font-weight:600;color:var(--white)}
+.fact-desc{font-size:.74rem;color:var(--t3);margin-top:2px}
+.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:40px}
+.skill-cat{background:rgba(255,255,255,0.04);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.07);border-radius:var(--r-lg);padding:24px 20px;transition:all var(--tr)}
+.skill-cat:hover{border-color:rgba(6,182,212,0.25)}
+.sc-label{font-family:var(--fm);font-size:.65rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.sc-item{display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(--t2);padding:8px 0;border-bottom:1px solid var(--border)}
+.sc-item:last-child{border-bottom:none}
+.sc-dot{width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.val-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px}
+.val-item{padding:26px 22px;background:rgba(255,255,255,0.04);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.07);border-radius:var(--r-lg);transition:all var(--tr)}
+.val-item:hover{border-color:rgba(6,182,212,0.25);transform:translateY(-2px)}
+.val-icon{font-size:1.5rem;margin-bottom:12px}
+.val-t{font-family:var(--fh);font-size:1rem;font-weight:600;color:var(--white);margin-bottom:6px}
+.val-d{font-size:.8rem;color:var(--t3);line-height:1.75}
+.str-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.str-points{display:flex;flex-direction:column;gap:14px}
+.str-item{display:flex;align-items:flex-start;gap:14px;padding:18px 20px;background:rgba(255,255,255,0.04);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.07);border-radius:var(--r);transition:all var(--tr)}
+.str-item:hover{border-color:rgba(6,182,212,0.25)}
+.str-num{font-family:var(--fh);font-size:1.4rem;font-weight:700;color:var(--gold-border);line-height:1;flex-shrink:0;min-width:28px}
+.str-t{font-size:.87rem;font-weight:600;color:var(--white);margin-bottom:4px}
+.str-d{font-size:.78rem;color:var(--t3);line-height:1.75}
+.tools-wrap{display:flex;flex-wrap:wrap;gap:8px;margin-top:32px}
+.tool-pill{padding:7px 16px;background:rgba(255,255,255,0.04);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.07);border-radius:40px;font-size:.8rem;color:var(--t2);transition:all var(--tr)}
+.tool-pill:hover{border-color:rgba(6,182,212,0.25);color:var(--gold)}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr}.about-photo{order:-1;max-width:280px;margin:0 auto;aspect-ratio:1}.skills-grid{grid-template-columns:repeat(2,1fr)}.val-grid{grid-template-columns:1fr}.str-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.skills-grid{grid-template-columns:1fr}.facts{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav id="nav"><div class="wrap nav-inner">
+  <a href="index.html" class="nav-logo">Zeba.</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+    <li><a href="project.html">Work</a></li><li><a href="index.html#agents">AI Agents</a></li>
+    <li><a href="index.html#pricing">Pricing</a></li><li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-right"><a href="contact.html" class="nav-cta">Let's Talk</a><div class="ham" id="ham"><span></span><span></span><span></span></div></div>
+</div></nav>
+<div class="mob-nav" id="mob"><button class="mob-close" id="mclose">✕</button>
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="project.html">Work</a><a href="index.html#agents">AI Agents</a><a href="index.html#pricing">Pricing</a><a href="contact.html">Contact</a>
+</div>
+
+<div class="page-top"><div class="wrap">
+  <div class="eyebrow rev">About Me</div>
+  <h1 class="h2 rev" style="font-size:clamp(1.8rem,3.5vw,2.8rem)">A Freelancer Who Thinks About<br>Your Business, Not Just Your Website</h1>
+</div></div>
+
+<section class="section"><div class="wrap">
+  <div class="about-grid">
+    <div class="rev">
+      <div class="about-photo">
+        <img src="zeba-photo.jpg" alt="Zeba" onerror="this.style.display='none'">
+        <div class="about-photo-tag">Web Designer &amp; Developer</div>
+      </div>
+    </div>
+    <div class="rev d2">
+      <div style="font-family:var(--fm);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;opacity:.8">Curious Mind · Creative Solutions · Continuous Growth</div>
+      <h2 class="h2">Hi, I'm Zeba.</h2>
+      <div class="about-text">
+        <p>Main ek web designer aur developer hoon jo India mein independently kaam karti hoon. Jab tum mujhe hire karte ho, tumhe meri full attention milti hai — koi junior nahi, koi agency overhead nahi.</p>
+        <p>Main web design mein is liye aayi kyunki zyaadatar chhote businesses ya toh koi website nahi thi, ya ek thi jo kuch kaam nahi kar rahi thi. <strong>Ek website ko customers laane chahiye. Main usi ke liye design karti hoon.</strong></p>
+        <p>Main coaching institutes, local businesses, startups, aur service-based companies ke saath kaam karti hoon. Main AI agents aur automated workflows bhi banati hoon jo businesses ko smarter operate karne mein help karte hain.</p>
+      </div>
+      <div class="creds">
+        <span class="tag tag-gold">Web Designer</span><span class="tag tag-gold">Frontend Developer</span>
+        <span class="tag tag-glass">SEO</span><span class="tag tag-glass">AI Agents</span><span class="tag tag-glass">Based in Delhi</span>
+      </div>
+      <div class="facts">
+        <div class="fact"><div class="fact-icon">📱</div><div class="fact-label">Mobile-First</div><div class="fact-desc">Phones before desktops, always</div></div>
+        <div class="fact"><div class="fact-icon">🗣️</div><div class="fact-label">Direct Communication</div><div class="fact-desc">You talk to me, not a manager</div></div>
+        <div class="fact"><div class="fact-icon">🤖</div><div class="fact-label">AI-Enhanced</div><div class="fact-desc">Faster delivery, smarter builds</div></div>
+        <div class="fact"><div class="fact-icon">📈</div><div class="fact-label">Results-Driven</div><div class="fact-desc">Every design decision earns its place</div></div>
+      </div>
+      <a href="contact.html" class="btn btn-gold">Discuss Your Project</a>
+    </div>
+  </div>
+</div></section>
+
+<div class="sdiv"></div>
+
+<section class="section" style="background:rgba(255,255,255,0.02)"><div class="wrap">
+  <div class="eyebrow rev">Technical Skills</div>
+  <h2 class="h2 rev">What I Know &amp; Use</h2>
+  <div class="skills-grid">
+    <div class="skill-cat rev"><div class="sc-label">Frontend</div>
+      <div class="sc-item"><span class="sc-dot"></span>HTML5</div>
+      <div class="sc-item"><span class="sc-dot"></span>CSS3</div>
+      <div class="sc-item"><span class="sc-dot"></span>JavaScript</div>
+      <div class="sc-item"><span class="sc-dot"></span>Responsive Design</div>
+    </div>
+    <div class="skill-cat rev d1"><div class="sc-label">Design</div>
+      <div class="sc-item"><span class="sc-dot"></span>UI/UX Design</div>
+      <div class="sc-item"><span class="sc-dot"></span>Landing Pages</div>
+      <div class="sc-item"><span class="sc-dot"></span>Wireframing</div>
+      <div class="sc-item"><span class="sc-dot"></span>Visual Design</div>
+    </div>
+    <div class="skill-cat rev d2"><div class="sc-label">SEO</div>
+      <div class="sc-item"><span class="sc-dot"></span>On-Page SEO</div>
+      <div class="sc-item"><span class="sc-dot"></span>Technical SEO</div>
+      <div class="sc-item"><span class="sc-dot"></span>Schema Markup</div>
+      <div class="sc-item"><span class="sc-dot"></span>Core Web Vitals</div>
+    </div>
+    <div class="skill-cat rev d3"><div class="sc-label">AI Tools</div>
+      <div class="sc-item"><span class="sc-dot"></span>Claude / ChatGPT</div>
+      <div class="sc-item"><span class="sc-dot"></span>Cursor &amp; Bolt</div>
+      <div class="sc-item"><span class="sc-dot"></span>Lovable &amp; Replit</div>
+      <div class="sc-item"><span class="sc-dot"></span>n8n / Make.com</div>
+    </div>
+  </div>
+</div></section>
+
+<div class="sdiv"></div>
+
+<section class="section"><div class="wrap">
+  <div class="eyebrow rev">My Values</div>
+  <h2 class="h2 rev">What I Believe Good Web Design Is</h2>
+  <div class="val-grid">
+    <div class="val-item rev"><div class="val-icon">🎯</div><div class="val-t">Design for outcomes</div><div class="val-d">A beautiful site that doesn't generate leads has failed at its job. Every layout decision I make connects to what the business needs.</div></div>
+    <div class="val-item rev d1"><div class="val-icon">📱</div><div class="val-t">Mobile is not optional</div><div class="val-d">70%+ of web traffic in India is mobile. I design for small screens first and test on real devices.</div></div>
+    <div class="val-item rev d2"><div class="val-icon">🔍</div><div class="val-t">SEO is architecture</div><div class="val-d">Search visibility is built into how a site is structured — it can't be added on later. I treat SEO as part of the build.</div></div>
+    <div class="val-item rev"><div class="val-icon">🗣️</div><div class="val-t">Honest communication</div><div class="val-d">Main wohi promise karti hoon jo main deliver kar sakti hoon. Realistic timelines, honest quotes, clear updates throughout.</div></div>
+    <div class="val-item rev d1"><div class="val-icon">🤝</div><div class="val-t">Your business first</div><div class="val-d">Main sirf apne portfolio ke liye build nahi kar rahi. Main kuch aise build kar rahi hoon jo tumhare customers ke liye kaam kare.</div></div>
+    <div class="val-item rev d2" style="border-color:rgba(6,182,212,0.25);background:rgba(212,175,55,.04)"><div class="val-icon">📈</div><div class="val-t" style="color:var(--gold)">Growth Mindset</div><div class="val-d">I enjoy learning new skills and exploring innovative tools. Every client gets the benefit of my most current knowledge.</div></div>
+  </div>
+</div></section>
+
+<div class="sdiv"></div>
+
+<section class="section" style="background:rgba(255,255,255,0.02)"><div class="wrap">
+  <div class="eyebrow rev">Personal Strength</div>
+  <h2 class="h2 rev">Always Learning. <span class="gold">Always Improving.</span></h2>
+  <div class="str-grid">
+    <div class="rev">
+      <p style="font-size:.95rem;color:var(--t3);line-height:1.9;margin-bottom:16px">Main naye technologies, tools, aur digital strategies seekhna enjoy karti hoon. Yeh curiosity mujhe modern web design trends, AI-powered workflows, SEO techniques, aur digital marketing practices ke saath updated rehne mein help karti hai.</p>
+      <p style="font-size:.95rem;color:var(--t3);line-height:1.9;margin-bottom:16px">Outdated methods pe rely karne ki bajaye, main continuously better ways explore karti hoon — faster, smarter, aur more effective solutions create karne ke liye.</p>
+      <p style="font-size:.95rem;color:var(--t2);line-height:1.9;font-weight:500">Har project ek opportunity hai — learn karne ki, improve karne ki, aur aur bhi better results deliver karne ki.</p>
+    </div>
+    <div class="str-points rev d2">
+      <div class="str-item"><div class="str-num">01</div><div><div class="str-t">AI Tools &amp; Modern Workflow</div><div class="str-d">Claude, ChatGPT, Cursor, Bolt — faster delivery, smarter solutions jo traditional methods se better hain.</div></div></div>
+      <div class="str-item"><div class="str-num">02</div><div><div class="str-t">Web Design Trends</div><div class="str-d">Current UI/UX patterns continuously explore karti hoon — client websites modern aur effective rehte hain.</div></div></div>
+      <div class="str-item"><div class="str-num">03</div><div><div class="str-t">SEO &amp; Digital Marketing</div><div class="str-d">Actively learning updates — har website jo main banati hoon search mein better perform karti hai.</div></div></div>
+      <div class="str-item"><div class="str-num">04</div><div><div class="str-t">Better Every Project</div><div class="str-d">Clients ko hmsha meri latest knowledge ka benefit milta hai — har project se main aur better hoti hoon.</div></div></div>
+    </div>
+  </div>
+</div></section>
+
+<div class="sdiv"></div>
+
+<section class="section"><div class="wrap">
+  <div class="eyebrow rev">Tools I Use</div>
+  <h2 class="h2 rev">My Everyday Toolkit</h2>
+  <div class="tools-wrap rev d1">
+    <span class="tool-pill">HTML5</span><span class="tool-pill">CSS3</span><span class="tool-pill">JavaScript</span>
+    <span class="tool-pill">Claude AI</span><span class="tool-pill">ChatGPT</span><span class="tool-pill">Cursor</span>
+    <span class="tool-pill">Bolt</span><span class="tool-pill">Lovable</span><span class="tool-pill">Replit</span>
+    <span class="tool-pill">Gemini</span><span class="tool-pill">n8n</span><span class="tool-pill">Make.com</span>
+    <span class="tool-pill">Figma</span><span class="tool-pill">Google Analytics</span><span class="tool-pill">Google Search Console</span>
+    <span class="tool-pill">Schema.org</span><span class="tool-pill">VS Code</span><span class="tool-pill">Git</span>
+  </div>
+</div></section>
+
+<div style="background:var(--navy2);padding:80px 0;text-align:center;border-top:1px solid var(--border)"><div class="wrap">
+  <h2 class="h2 rev">Want to Work Together?</h2>
+  <p style="color:var(--t3);max-width:460px;margin:0 auto 28px;font-size:.95rem;line-height:1.85" class="rev">Tell me about your business. I'll reply within 24 hours with a clear plan and honest quote.</p>
+  <div class="rev" style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap">
+    <a href="contact.html" class="btn btn-gold btn-lg">Get a Free Quote</a>
+    <a href="project.html" class="btn btn-out btn-lg">See My Work →</a>
+  </div>
+</div></div>
+
+<footer><div class="wrap">
+  <div class="ft-top">
+    <div><div class="ft-logo">Zeba.</div><div class="ft-desc">Web Designer &amp; Developer — modern websites and AI solutions for businesses.</div>
+      <div class="ft-social"><a href="https://linkedin.com/in/zebamansoori" target="_blank" rel="noopener noreferrer" class="ft-s-btn">in</a><a href="https://instagram.com/zebamansoori" target="_blank" rel="noopener noreferrer" class="ft-s-btn">ig</a><a href="https://github.com/zebamansoori" target="_blank" rel="noopener noreferrer" class="ft-s-btn">gh</a></div>
+    </div>
+    <div class="ft-col"><div class="ft-col-title">Pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="project.html">Work</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="ft-col"><div class="ft-col-title">Projects</div><ul><li><a href="samyak.html">Samyak Computer Classes</a></li><li><a href="aradhna.html">Aradhna Incense</a></li></ul></div>
+    <div class="ft-col"><div class="ft-col-title">Contact</div><ul><li><a href="mailto:zebamansoori.fea@gmail.com">zebamansoori.fea@gmail.com</a></li><li><a href="https://wa.me/918595882978">WhatsApp</a></li><li><a href="tel:+918595882978">+91 8595882978</a></li></ul></div>
+  </div>
+  <div class="ft-bottom"><span>© 2025 Zeba · Web Designer &amp; Developer</span><span>Designed &amp; built by me.</span></div>
+</div></footer>
+<button id="bt" aria-label="Back to top">↑</button>
+<script src="main.js"></script>
+</body></html>

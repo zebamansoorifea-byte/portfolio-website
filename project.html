@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Work — Zeba | Web Design Projects</title>
+<meta name="description" content="Web design projects by Zeba — Samyak Computer Classes and Aradhna Incense. Real websites with real results.">
+<link rel="canonical" href="https://zebamansoori.com/project.html">
+<meta property="og:title" content="Work — Zeba"><meta property="og:url" content="https://zebamansoori.com/project.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23090E1A'/><text x='16' y='23' font-family='serif' font-size='18' font-weight='700' fill='%23D4AF37' text-anchor='middle'>Z</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.proj-list{display:flex;flex-direction:column;gap:24px;margin-top:48px}
+.pcard-full{background:var(--navy3);border:1px solid rgba(255,255,255,0.07);border-radius:var(--r-xl);overflow:hidden;display:grid;grid-template-columns:420px 1fr;transition:all var(--tr)}
+.pcard-full:hover{border-color:rgba(6,182,212,0.25);box-shadow:var(--sh-gold)}
+.pcard-visual{position:relative;min-height:320px}
+.pcard-visual .iframe-wrap{height:100%;border-radius:0}
+.pcard-body{padding:40px;border-left:1px solid var(--border)}
+.pcard-role{font-family:var(--fm);font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--t3);margin-bottom:8px}
+.pcard-title{font-family:var(--fh);font-size:1.8rem;font-weight:600;color:var(--white);letter-spacing:-.02em;margin-bottom:8px}
+.pcard-desc{font-size:.87rem;color:var(--t3);line-height:1.8;margin-bottom:16px}
+.pcard-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
+.pcard-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:22px;padding:14px;background:rgba(255,255,255,0.04);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.07);border-radius:var(--r-sm)}
+.pstat-n{font-family:var(--fh);font-size:1.3rem;font-weight:700;color:var(--gold)}
+.pstat-l{font-size:.68rem;color:var(--t3);margin-top:1px}
+.pcard-links{display:flex;gap:10px;flex-wrap:wrap}
+.land-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px}
+.land-card{background:var(--navy3);border:1px solid rgba(255,255,255,0.07);border-radius:var(--r-lg);overflow:hidden;transition:all var(--tr)}
+.land-card:hover{border-color:rgba(6,182,212,0.25);transform:translateY(-2px)}
+.land-iframe{height:100px;overflow:hidden;position:relative}
+.land-iframe iframe{width:250%;height:250%;transform:scale(.4);transform-origin:top left;border:none;pointer-events:none}
+.land-iframe-ov{position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(9,14,26,.75) 100%)}
+.land-body{padding:16px}
+.land-title{font-size:.88rem;font-weight:600;color:var(--white);margin-bottom:4px}
+.land-desc{font-size:.76rem;color:var(--t3);line-height:1.6;margin-bottom:10px}
+.land-link{font-size:.74rem;font-weight:600;color:var(--gold)}
+@media(max-width:900px){.pcard-full{grid-template-columns:1fr}.pcard-visual{min-height:200px}.pcard-body{border-left:none;border-top:1px solid var(--border)}}
+@media(max-width:560px){.land-grid{grid-template-columns:1fr 1fr}.pcard-stats{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<nav id="nav"><div class="wrap nav-inner">
+  <a href="index.html" class="nav-logo">Zeba.</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+    <li><a href="project.html">Work</a></li><li><a href="index.html#agents">AI Agents</a></li>
+    <li><a href="index.html#pricing">Pricing</a></li><li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-right"><a href="contact.html" class="nav-cta">Let's Talk</a><div class="ham" id="ham"><span></span><span></span><span></span></div></div>
+</div></nav>
+<div class="mob-nav" id="mob"><button class="mob-close" id="mclose">✕</button>
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="project.html">Work</a><a href="index.html#agents">AI Agents</a><a href="index.html#pricing">Pricing</a><a href="contact.html">Contact</a>
+</div>
+
+<div class="page-top"><div class="wrap">
+  <div class="eyebrow rev">My Work</div>
+  <h1 class="h2 rev" style="font-size:clamp(1.8rem,3.5vw,2.8rem)">Projects I've Built</h1>
+  <p class="lead rev">Two complete projects, built end-to-end — design, development, SEO, and launch. Real results for real businesses.</p>
+</div></div>
+
+<section class="section"><div class="wrap">
+  <div class="proj-list">
+    <div class="pcard-full rev">
+      <div class="pcard-visual">
+        <div class="iframe-wrap" style="height:100%">
+          <div class="iframe-tag"><span class="tag tag-glass">Education</span></div>
+          <iframe src="https://computerclassesnearme.in/" loading="lazy" scrolling="no" title="Samyak Computer Classes"></iframe>
+          <div class="iframe-ov"></div>
+          <div class="iframe-badge"><span class="iframe-dot"></span>computerclassesnearme.in</div>
+        </div>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-role">Website Design · Development · SEO · Landing Pages</div>
+        <h2 class="pcard-title">Samyak Computer Classes</h2>
+        <p class="pcard-desc">Complete digital presence for a NSDC-certified computer institute in Badarpur, Delhi. Main website + 5 course landing pages covering Digital Marketing, Accounting with AI, UI/UX, and Data Science.</p>
+        <div class="pcard-tags"><span class="tag tag-gold">Mobile Responsive</span><span class="tag tag-glass">On-Page SEO</span><span class="tag tag-glass">Lead Forms</span><span class="tag tag-glass">WhatsApp</span><span class="tag tag-glass">250+ Courses</span><span class="tag tag-glass">5 Landing Pages</span></div>
+        <div class="pcard-stats">
+          <div><div class="pstat-n">250+</div><div class="pstat-l">Courses Listed</div></div>
+          <div><div class="pstat-n">5</div><div class="pstat-l">Landing Pages</div></div>
+          <div><div class="pstat-n">Full</div><div class="pstat-l">SEO Setup</div></div>
+        </div>
+        <div class="pcard-links">
+          <a href="samyak.html" class="btn btn-gold">Full Case Study →</a>
+          <a href="https://computerclassesnearme.in/" target="_blank" rel="noopener noreferrer" class="btn btn-out">Visit Live ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pcard-full rev d2">
+      <div class="pcard-visual">
+        <div class="iframe-wrap" style="height:100%">
+          <div class="iframe-tag"><span class="tag tag-glass">Manufacturing</span></div>
+          <iframe src="https://aradhnaincense.com/" loading="lazy" scrolling="no" title="Aradhna Incense"></iframe>
+          <div class="iframe-ov"></div>
+          <div class="iframe-badge"><span class="iframe-dot"></span>aradhnaincense.com</div>
+        </div>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-role">Website Design · Development · Brand Identity · B2B</div>
+        <h2 class="pcard-title">Aradhna Incense</h2>
+        <p class="pcard-desc">B2B product website for a dhoop sticks manufacturer and exporter. Product catalog, export section, private label/OEM page, certifications, and enquiry system — complete brand identity included.</p>
+        <div class="pcard-tags"><span class="tag tag-gold">Product Catalog</span><span class="tag tag-glass">B2B Enquiry</span><span class="tag tag-glass">Export Page</span><span class="tag tag-glass">Private Label/OEM</span><span class="tag tag-glass">Brand Identity</span></div>
+        <div class="pcard-stats">
+          <div><div class="pstat-n">6</div><div class="pstat-l">Product Categories</div></div>
+          <div><div class="pstat-n">B2B</div><div class="pstat-l">Export Ready</div></div>
+          <div><div class="pstat-n">Full</div><div class="pstat-l">Brand Identity</div></div>
+        </div>
+        <div class="pcard-links">
+          <a href="aradhna.html" class="btn btn-gold">Full Case Study →</a>
+          <a href="https://aradhnaincense.com/" target="_blank" rel="noopener noreferrer" class="btn btn-out">Visit Live ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="section" style="background:rgba(255,255,255,0.02)"><div class="wrap">
+  <div class="eyebrow rev">Additional Work</div>
+  <h2 class="h2 rev">Landing Pages Built for Samyak</h2>
+  <p class="lead rev">5 course-specific landing pages for ad campaigns and direct search traffic.</p>
+  <div class="land-grid">
+    <div class="land-card rev"><div class="land-iframe"><iframe src="https://computerclassesnearme.in/oldwebsite/ab/landing/index.html" loading="lazy" scrolling="no"></iframe><div class="land-iframe-ov"></div></div><div class="land-body"><div class="land-title">Digital Marketing Course</div><div class="land-desc">21-week offline course. Weekend batches. Location selector.</div><a href="https://computerclassesnearme.in/oldwebsite/ab/landing/index.html" target="_blank" rel="noopener noreferrer" class="land-link">View ↗</a></div></div>
+    <div class="land-card rev d1"><div class="land-iframe"><iframe src="https://computerclassesnearme.in/oldwebsite/ac/index.html" loading="lazy" scrolling="no"></iframe><div class="land-iframe-ov"></div></div><div class="land-body"><div class="land-title">Accounting with AI</div><div class="land-desc">Tally, SAP, Excel, AI accounting tools. NSDC certified.</div><a href="https://computerclassesnearme.in/oldwebsite/ac/index.html" target="_blank" rel="noopener noreferrer" class="land-link">View ↗</a></div></div>
+    <div class="land-card rev d2"><div class="land-iframe"><iframe src="https://computerclassesnearme.in/oldwebsite/ui%20ux/index.html" loading="lazy" scrolling="no"></iframe><div class="land-iframe-ov"></div></div><div class="land-body"><div class="land-title">UI/UX Design Course</div><div class="land-desc">Figma, Photoshop, Illustrator. Portfolio-based learning.</div><a href="https://computerclassesnearme.in/oldwebsite/ui%20ux/index.html" target="_blank" rel="noopener noreferrer" class="land-link">View ↗</a></div></div>
+    <div class="land-card rev"><div class="land-iframe"><iframe src="https://computerclassesnearme.in/oldwebsite/land/ds%20landing/index.html" loading="lazy" scrolling="no"></iframe><div class="land-iframe-ov"></div></div><div class="land-body"><div class="land-title">Data Science</div><div class="land-desc">Python, Power BI, ML. Career-focused with lead form.</div><a href="https://computerclassesnearme.in/oldwebsite/land/ds%20landing/index.html" target="_blank" rel="noopener noreferrer" class="land-link">View ↗</a></div></div>
+    <div class="land-card rev d1"><div class="land-iframe"><iframe src="https://computerclassesnearme.in/oldwebsite/DM/index.html" loading="lazy" scrolling="no"></iframe><div class="land-iframe-ov"></div></div><div class="land-body"><div class="land-title">DM Variant</div><div class="land-desc">Alternative Digital Marketing page with different CTA.</div><a href="https://computerclassesnearme.in/oldwebsite/DM/index.html" target="_blank" rel="noopener noreferrer" class="land-link">View ↗</a></div></div>
+  </div>
+</div></section>
+
+<div style="background:var(--navy);padding:72px 0;text-align:center;border-top:1px solid var(--border)"><div class="wrap">
+  <h2 class="h2 rev">Want a Website Like These?</h2>
+  <p style="color:var(--t3);max-width:460px;margin:0 auto 28px;font-size:.95rem;line-height:1.85" class="rev">Tell me about your business. Main 24 ghante mein reply karuungi.</p>
+  <div class="rev" style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap">
+    <a href="contact.html" class="btn btn-gold btn-lg">Get a Free Quote</a>
+    <a href="https://wa.me/918595882978" target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-lg">💬 WhatsApp</a>
+  </div>
+</div></div>
+
+<footer><div class="wrap">
+  <div class="ft-top">
+    <div><div class="ft-logo">Zeba.</div><div class="ft-desc">Web Designer &amp; Developer — modern websites for businesses.</div>
+      <div class="ft-social"><a href="https://linkedin.com/in/zebamansoori" target="_blank" rel="noopener noreferrer" class="ft-s-btn">in</a><a href="https://instagram.com/zebamansoori" target="_blank" rel="noopener noreferrer" class="ft-s-btn">ig</a><a href="https://github.com/zebamansoori" target="_blank" rel="noopener noreferrer" class="ft-s-btn">gh</a></div>
+    </div>
+    <div class="ft-col"><div class="ft-col-title">Pages</div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="project.html">Work</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="ft-col"><div class="ft-col-title">Projects</div><ul><li><a href="samyak.html">Samyak Computer Classes</a></li><li><a href="aradhna.html">Aradhna Incense</a></li></ul></div>
+    <div class="ft-col"><div class="ft-col-title">Contact</div><ul><li><a href="mailto:zebamansoori.fea@gmail.com">zebamansoori.fea@gmail.com</a></li><li><a href="https://wa.me/918595882978">WhatsApp</a></li><li><a href="tel:+918595882978">+91 8595882978</a></li></ul></div>
+  </div>
+  <div class="ft-bottom"><span>© 2025 Zeba · Web Designer &amp; Developer</span><span>Designed &amp; built by me.</span></div>
+</div></footer>
+<button id="bt" aria-label="Back to top">↑</button>
+<script src="main.js"></script>
+</body></html>
