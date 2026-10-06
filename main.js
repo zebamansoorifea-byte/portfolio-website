@@ -31,25 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', onScroll, { passive: true });
   if (bt) bt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-  /* ── MOBILE MENU ────────────────────────── */
-  const ham    = document.getElementById('ham');
-  const mob    = document.getElementById('mob');
-  const mclose = document.getElementById('mclose');
-  const closeMenu = () => {
-    if (mob) { mob.classList.remove('open'); document.body.style.overflow = ''; }
-  };
-  if (ham && mob) {
-    ham.addEventListener('click', () => { mob.classList.add('open'); document.body.style.overflow = 'hidden'; });
-    if (mclose) mclose.addEventListener('click', closeMenu);
-    mob.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
-  }
-
-  /* ── ACTIVE NAV ─────────────────────────── */
-  const path = location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links a, .mob-nav a').forEach(a => {
-    const href = a.getAttribute('href');
-    if (href && (href === path || href.endsWith(path))) a.classList.add('active');
-  });
 
   /* ── SCROLL REVEAL (IntersectionObserver) ─ */
   const revObs = new IntersectionObserver(entries => {
@@ -182,14 +163,36 @@ if (cursorDot) {
 const heroVideo = document.getElementById('heroVideo');
 const heroFallback = document.getElementById('heroFallbackImg');
 if (heroVideo) {
+  // Start loading immediately
+  heroVideo.load();
+  heroVideo.play().catch(() => {});
+
   heroVideo.addEventListener('canplay', () => {
+    heroVideo.style.opacity = '1';
+    heroVideo.style.display = 'block';
+    if (heroFallback) heroFallback.style.display = 'none';
+  });
+  heroVideo.addEventListener('loadeddata', () => {
+    heroVideo.style.opacity = '1';
     heroVideo.style.display = 'block';
     if (heroFallback) heroFallback.style.display = 'none';
   });
   heroVideo.addEventListener('error', () => {
     heroVideo.style.display = 'none';
-    if (heroFallback) heroFallback.style.display = 'block';
+    if (heroFallback) {
+      heroFallback.style.display = 'block';
+      heroFallback.style.cssText = 'height:100%;width:100%;object-fit:cover;object-position:center top;filter:brightness(.72) contrast(1.08);display:block';
+    }
   });
+  // Timeout fallback — if video doesn't load in 4s on mobile, show photo
+  setTimeout(() => {
+    if (heroVideo.readyState < 2) {
+      heroVideo.style.display = 'none';
+      if (heroFallback) {
+        heroFallback.style.cssText = 'height:100%;width:100%;object-fit:cover;object-position:center top;filter:brightness(.72) contrast(1.08);display:block';
+      }
+    }
+  }, 4000);
 }
 
 /* ── HERO TYPING ─────────────────────── */
